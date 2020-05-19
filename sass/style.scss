@@ -24,15 +24,19 @@ a:hover{
 * Header
 **/
 .header {
-  box-shadow: 0px 3px 8px #e2e5dc;
+  -webkit-box-shadow: 0px 3px 8px #e2e5dc;
+          box-shadow: 0px 3px 8px #e2e5dc;
   padding: 10px 0;
   &__content {
     display: flow-root;
   }
   &__menu {
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       margin: 0;
       li {
         line-height: 58px;
@@ -83,6 +87,8 @@ a:hover{
     display: initial;
   }
   &__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 13px;
     span {
@@ -95,6 +101,8 @@ a:hover{
       border-radius: 13px;
       padding: 10px 10px 10px 22px;
       font-family: "SourceSansPro-Bold";
+      -webkit-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
       transition: 0.4s ease;
       i{
         padding-left: 5px;
@@ -119,7 +127,9 @@ a:hover{
 .information{
     margin-top:-100px;
     &__item{
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         margin:0;
         color:#fff;
@@ -128,6 +138,8 @@ a:hover{
             display: inline-block;
             padding:30px; 
             border-radius: 30px;
+            -webkit-transition: 0.4s ease;
+            -o-transition: 0.4s ease;
             transition: 0.4s ease;
             ul{
                 padding-left:1em;
@@ -155,7 +167,9 @@ a:hover{
                 background-color: #6ecbff;
             } 
             &:hover{
-              transform: translateY(-10px);
+              -webkit-transform: translateY(-10px);
+                  -ms-transform: translateY(-10px);
+                      transform: translateY(-10px);
             } 
         }
         &>li:nth-child(3){
@@ -232,8 +246,12 @@ a:hover{
 * Popup
 **/
 #myModal{
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   transition: 0.4s ease;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   &.show{
     display: block;
     
@@ -261,7 +279,9 @@ a:hover{
   position: relative;
   z-index: 9999;
   top:45%; 
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); 
+      -ms-transform: translateY(-50%); 
+          transform: translateY(-50%);
   & button{
     font-weight: bold;
     text-align: left;
@@ -313,6 +333,7 @@ a:hover{
     width: 80%;
   }
   .information__item{
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     &-content{
       min-height: auto;
