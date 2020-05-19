@@ -67,12 +67,16 @@ a:hover {
 * Header
 **/
 .header {
+  -webkit-box-shadow: 0px 3px 8px #e2e5dc;
   box-shadow: 0px 3px 8px #e2e5dc;
   padding: 10px 0; }
   .header__content {
     display: flow-root; }
   .header__menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0; }
     .header__menu ul li {
@@ -112,6 +116,8 @@ a:hover {
     line-height: 1.1;
     display: initial; }
   .slider__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 13px; }
     .slider__button span {
@@ -124,6 +130,8 @@ a:hover {
       border-radius: 13px;
       padding: 10px 10px 10px 22px;
       font-family: "SourceSansPro-Bold";
+      -webkit-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
       transition: 0.4s ease; }
       .slider__button span i {
         padding-left: 5px;
@@ -141,7 +149,9 @@ a:hover {
 .information {
   margin-top: -100px; }
   .information__item {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
     color: #fff; }
@@ -150,6 +160,8 @@ a:hover {
       display: inline-block;
       padding: 30px;
       border-radius: 30px;
+      -webkit-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
       transition: 0.4s ease; }
       .information__item > li ul {
         padding-left: 1em; }
@@ -169,6 +181,8 @@ a:hover {
       .information__item > li:nth-child(4) {
         background-color: #6ecbff; }
       .information__item > li:hover {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
         transform: translateY(-10px); }
     .information__item > li:nth-child(3) .information__item-content {
       color: #192556; }
@@ -222,7 +236,11 @@ a:hover {
 * Popup
 **/
 #myModal {
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   transition: 0.4s ease;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0); }
   #myModal.show {
     display: block; }
@@ -247,6 +265,8 @@ a:hover {
   position: relative;
   z-index: 9999;
   top: 45%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
   .modalInformation button {
     font-weight: bold;
@@ -286,6 +306,7 @@ a:hover {
   .modalInformation {
     width: 80%; }
   .information__item {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
     .information__item-content {
       min-height: auto;
